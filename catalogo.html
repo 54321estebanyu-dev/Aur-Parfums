@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light" data-page="catalogo">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#f5efe6">
+  <meta name="description" content="Catálogo completo de AURÉ PARFUMS: 161 fragancias de marca a precio justo. Busca, filtra y pide por WhatsApp.">
+  <meta name="keywords" content="perfumes, eau de parfum, fragancias, catalogo, originales, Aure Parfums">
+  <meta property="og:title" content="Catálogo — AURÉ PARFUMS × XCRSCREW">
+  <meta property="og:description" content="161 fragancias de marca que huelen, duran y se sienten premium.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="icon.png">
+  <title>Catálogo — AURÉ PARFUMS × XCRSCREW</title>
+  <link rel="icon" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=22">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("aure_theme");
+        if (!t) t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", t);
+        var q = (location.search || "").toLowerCase();
+        var hc = navigator.hardwareConcurrency || 8;
+        var mem = navigator.deviceMemory || 8;
+        var android = /Android/i.test(navigator.userAgent || "");
+        var weak = (android && (hc <= 4 || mem <= 4)) || hc <= 2 || mem <= 2;
+        if (q.indexOf("lite=1") >= 0 || (weak && q.indexOf("lite=0") < 0)) {
+          document.documentElement.classList.add("lite");
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <script src="config.js" defer></script>
+  <script src="script.js?v=22" defer></script>
+</head>
+<body data-view="parfums">
+
+  <!-- ===== ORNAMENTAL BACKGROUND ===== -->
+  <div class="backdrop" aria-hidden="true">
+    <div class="blob blob-a"></div>
+    <div class="blob blob-b"></div>
+    <div class="blob blob-c"></div>
+    <div class="blob blob-d"></div>
+    <div class="grain"></div>
+  </div>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="nav" id="nav">
+    <div class="nav-inner glass">
+      <a class="brand" href="index.html" aria-label="Auré Parfums × XCRSCREW inicio">
+        <img src="icon.png" alt="Logo Auré Parfums" width="36" height="36" class="brand-logo">
+        <span>Auré Parfums × XCRSCREW</span>
+      </a>
+      <nav class="links" aria-label="Principal">
+        <a href="index.html">Inicio</a>
+        <a href="index.html#productos">Favoritos</a>
+        <a href="https://wa.me/573059279731" target="_blank" rel="noopener">WhatsApp</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn glass" id="themeBtn" aria-label="Cambiar tema claro u oscuro">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4.5"/>
+            <path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>
+          </svg>
+        </button>
+        <button class="icon-btn glass" id="cartBtn" aria-label="Abrir carrito" aria-expanded="false">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 7h12l1.2 12.2a1.6 1.6 0 0 1-1.6 1.8H6.4a1.6 1.6 0 0 1-1.6-1.8L6 7z"/>
+            <path d="M9 10V6a3 3 0 0 1 6 0v4"/>
+          </svg>
+          <span class="cart-count" id="cartCount" hidden>0</span>
+        </button>
+        <button class="icon-btn glass menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu glass" id="mobileMenu" hidden>
+      <a href="index.html">Inicio</a>
+      <a href="index.html#productos">Favoritos</a>
+      <a href="https://wa.me/573059279731" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ===== CATÁLOGO COMPLETO ===== -->
+    <section class="section" id="productos">
+      <div class="section-head">
+        <p class="eyebrow reveal">Catálogo</p>
+        <h2 class="reveal">Los 161 perfumes</h2>
+        <p class="reveal">Busca por marca o nombre, o filtra por categoría: árabes premium, dama y diseñador.</p>
+        <p class="reveal price-scale">Precio por frasco de 50 ml. Envíos a toda Colombia.</p>
+      </div>
+      <div class="catalog-bar glass reveal">
+        <input id="catSearch" class="cat-search" type="search" placeholder="Buscar perfume o marca… (ej. Lattafa, Dior, Good Girl)" aria-label="Buscar en el catálogo">
+        <div class="cat-chips" id="catChips" role="group" aria-label="Filtrar por categoría">
+          <button type="button" class="cat-chip on" data-cat="all" aria-pressed="true">Todos</button>
+          <button type="button" class="cat-chip" data-cat="arabe" aria-pressed="false">Árabes premium</button>
+          <button type="button" class="cat-chip" data-cat="dama" aria-pressed="false">Dama</button>
+          <button type="button" class="cat-chip" data-cat="hombre" aria-pressed="false">Diseñador</button>
+        </div>
+        <p class="cat-count" id="catCount" role="status"></p>
+      </div>
+      <div class="grid" id="productGrid"></div>
+      <div class="cat-more reveal">
+        <a class="btn btn-ghost" href="index.html#productos">← Los favoritos de la portada</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img class="brand-logo" src="icon.png" alt="Logo Auré Parfums" width="40" height="40" loading="lazy">
+        <strong>Auré Parfums × XCRSCREW</strong>
+        <p>Perfumes de marca de alta calidad. Envíos a toda Colombia.</p>
+      </div>
+      <nav aria-label="Institucional">
+        <a href="index.html">Inicio</a>
+        <a href="index.html#productos">Favoritos</a>
+        <a href="https://wa.me/573059279731" target="_blank" rel="noopener">WhatsApp</a>
+      </nav>
+      <div class="footer-meta">
+        <a class="mailto-link" href="mailto:estebancorreaappdata456@gmail.com">estebancorreaappdata456@gmail.com</a>
+        <a class="mailto-link" href="https://wa.me/573059279731" target="_blank" rel="noopener">+57 305 927 9731</a>
+        <p class="fine">© 2026 Auré Parfums. Diseño Liquid Glass.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== WHATSAPP FLOTANTE ===== -->
+  <a href="https://wa.me/573059279731?text=Hola%20Aur%C3%A9%20Parfums%2C%20vengo%20de%20la%20p%C3%A1gina%20y%20quiero%20hacer%20un%20pedido" class="wa-float" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+    <svg viewBox="0 0 24 24" width="26" height="26" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.4 14.1c-.2.6-1.2 1.2-1.7 1.2-.4.1-1 .1-1.6-.1-.4-.1-.9-.3-1.5-.6-2.6-1.1-4.3-3.8-4.4-4-.1-.2-1.1-1.4-1.1-2.7 0-1.3.7-1.9.9-2.2.2-.3.5-.3.6-.3h.5c.2 0 .4 0 .6.4l.9 2.1c.1.2.1.4 0 .5l-.5.7c-.1.2-.3.3-.1.6.1.3.7 1.2 1.5 1.9 1 1 1.9 1.3 2.2 1.5.3.1.4.1.6-.1l.8-.9c.2-.3.4-.2.6-.1l1.9.9c.3.1.4.2.5.3 0 .1 0 .6-.1 1z"/></svg>
+  </a>
+
+  <!-- ===== CART DRAWER ===== -->
+  <div class="scrim" id="scrim" hidden></div>
+  <aside class="drawer glass" id="cartDrawer" aria-hidden="true" aria-label="Carrito de compra">
+    <div class="drawer-head">
+      <h3>Tu carrito</h3>
+      <button class="icon-btn" id="closeCart" aria-label="Cerrar carrito">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <ul class="cart-items" id="cartItems"></ul>
+    <div class="drawer-foot">
+      <div class="drawer-total">
+        <span id="cartTotalNote">Total</span><strong id="cartTotal">$0</strong>
+      </div>
+      <p class="fine">Pide por WhatsApp o correo con tu pedido y listo.</p>
+      <button class="btn btn-primary btn-block" id="checkoutBtn">Confirmar por WhatsApp</button>
+    </div>
+  </aside>
+
+  <!-- ===== TOAST ===== -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+</body>
+</html>
