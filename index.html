@@ -1,0 +1,421 @@
+﻿﻿﻿﻿<!DOCTYPE html>
+<html lang="es" data-theme="light" data-page="inicio">
+<head>
+  <!--
+  ================================================================
+  CONFIGURACIÓN DEL CATÁLOGO — se edita en config.js.
+  El archivo alimenta index.html (portada, 6 destacados) y
+  catalogo.html (los 161 perfumes). Mismos datos en ambos.
+  ================================================================
+  -->
+  <script src="config.js" defer></script>
+  <meta name="robots" content="noindex, nofollow">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#f5efe6">
+  <meta name="description" content="Auré Parfums — Perfumes de marca de alta calidad a precio justo. Envíos a toda Colombia.">
+  <meta name="keywords" content="perfumes, eau de parfum, fragancias, originales, Aure Parfums">
+  <meta property="og:title" content="AURÉ PARFUMS × XCRSCREW — Perfumes de alta calidad">
+  <meta property="og:description" content="Fragancias de marca que huelen, duran y se sienten premium.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="icon.png">
+  <title>AURÉ PARFUMS × XCRSCREW — Perfumes de alta calidad</title>
+  <link rel="icon" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=22">
+<script>
+    (function () {
+      try {
+        var t = localStorage.getItem("aure_theme");
+        if (!t) t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", t);
+        var q = (location.search || "").toLowerCase();
+        var hc = navigator.hardwareConcurrency || 8;
+        var mem = navigator.deviceMemory || 8;
+        var android = /Android/i.test(navigator.userAgent || "");
+        var weak = (android && (hc <= 4 || mem <= 4)) || hc <= 2 || mem <= 2;
+        if (q.indexOf("lite=1") >= 0 || (weak && q.indexOf("lite=0") < 0)) {
+          document.documentElement.classList.add("lite");
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Store",
+    "name": "Auré Parfums × XCRSCREW",
+    "description": "Perfumes de marca de alta calidad a precio justo.",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "estebancorreaappdata456@gmail.com",
+      "telephone": "+57 305 927 9731",
+      "contactType": "customer support"
+    }
+  }
+  </script>
+</head>
+<body data-view="parfums">
+
+  <!-- ===== ORNAMENTAL BACKGROUND ===== -->
+  <div class="backdrop" aria-hidden="true">
+    <div class="blob blob-a"></div>
+    <div class="blob blob-b"></div>
+    <div class="blob blob-c"></div>
+    <div class="blob blob-d"></div>
+    <div class="grain"></div>
+  </div>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="nav" id="nav">
+    <div class="nav-inner glass">
+      <a class="brand" href="#top" aria-label="Auré Parfums × XCRSCREW inicio">
+        <img src="icon.png" alt="Logo Auré Parfums" width="36" height="36" class="brand-logo">
+        <span>Auré Parfums × XCRSCREW</span>
+      </a>
+      <nav class="links" aria-label="Principal">
+        <a href="#colecciones">Colecciones</a>
+        <a href="#productos">Perfumes</a>
+        <a href="#experiencia">La Casa</a>
+        <a href="#opiniones">Opiniones</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+<div class="nav-actions">
+        <button class="icon-btn glass" id="themeBtn" aria-label="Cambiar tema claro u oscuro">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4.5"/>
+            <path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>
+          </svg>
+        </button>
+        <button class="icon-btn glass" id="cartBtn" aria-label="Abrir carrito" aria-expanded="false">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 7h12l1.2 12.2a1.6 1.6 0 0 1-1.6 1.8H6.4a1.6 1.6 0 0 1-1.6-1.8L6 7z"/>
+            <path d="M9 10V6a3 3 0 0 1 6 0v4"/>
+          </svg>
+          <span class="cart-count" id="cartCount" hidden>0</span>
+        </button>
+        <button class="icon-btn glass menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+<div class="mobile-menu glass" id="mobileMenu" hidden>
+      <a href="#colecciones">Colecciones</a>
+      <a href="#productos">Perfumes</a>
+      <a href="#experiencia">La Casa</a>
+      <a href="#opiniones">Opiniones</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+  </header>
+
+  <!-- ===== BARRA XCRSCREW × AURÉ PARFUMS ===== -->
+  <div class="view-selector glass" role="tablist" aria-label="Cambiar entre XCRSCREW y AURÉ PARFUMS">
+    <button class="view-tab" type="button" data-view="xcr" role="tab" aria-selected="false">XCRSCREW</button>
+    <span class="view-cross" aria-hidden="true">×</span>
+    <button class="view-tab" type="button" data-view="parfums" role="tab" aria-selected="true">AURÉ PARFUMS</button>
+  </div>
+
+  <main id="top">
+
+    <!-- ===== XCRSCREW (ESTUDIO) ===== -->
+    <section class="section xcr-view" data-view-panel="xcr" hidden>
+      <div class="section-head">
+        <p class="eyebrow glass reveal">· Estudio de páginas web ·</p>
+        <h2 class="reveal">XCRSCREW: tu página,<br><em>hecha bien.</em></h2>
+        <p class="reveal">Sitios elegantes y rápidos para marcas y negocios. Tiendas online, páginas de marca y la web detrás de tu perfil de Instagram.</p>
+      </div>
+      <div class="cards">
+        <article class="glass card reveal">
+          <div class="card-art amber"></div>
+          <h3>Páginas para Instagram</h3>
+          <p>La página de tu link en bio: qué haces, tus precios y cómo escribirte, en un solo enlace.</p>
+        </article>
+        <article class="glass card reveal">
+          <div class="card-art floral"></div>
+          <h3>Tiendas online</h3>
+          <p>Catálogo, carrito y pedidos por WhatsApp, como esta web de Auré Parfums.</p>
+        </article>
+        <article class="glass card reveal">
+          <div class="card-art woody"></div>
+          <h3>Portafolios de marca</h3>
+          <p>Una vitrina que se ve increíble en el celular y carga rápido, para vender o mostrar tu trabajo.</p>
+        </article>
+      </div>
+      <div class="xcr-cta reveal">
+        <p>Cuéntame qué necesitas y lo hacemos realidad.</p>
+        <a class="btn btn-primary" href="https://wa.me/573059279731?text=Hola%20XCRSCREW%2C%20quiero%20una%20p%C3%A1gina%20web" target="_blank" rel="noopener">Pedir mi web por WhatsApp</a>
+        <a class="btn btn-ghost" href="https://www.instagram.com/xcrs_essence/" target="_blank" rel="noopener">Instagram @xcrs_essence</a>
+      </div>
+    </section>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero store-view" data-view-panel="parfums">
+      <div class="hero-copy">
+        <p class="eyebrow glass reveal">Llegaron los nuevos clásicos</p>
+        <h1 class="reveal">
+          La elegancia<br>
+          <em>se lleva puesta.</em>
+        </h1>
+        <p class="hero-sub reveal">
+          Perfumes originales de las grandes casas de la perfumería,
+          al precio que sí quieres pagar.
+        </p>
+        <div class="hero-cta reveal">
+          <a class="btn btn-primary" href="catalogo.html">
+            Ver catálogo completo
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="https://wa.me/573059279731" target="_blank" rel="noopener">Pregúntame por WhatsApp</a>
+        </div>
+        <ul class="hero-stats reveal">
+          <li><strong>161</strong><span>fragancias en stock</span></li>
+          <li><strong>4.9★</strong><span>valoración media</span></li>
+          <li><strong>72h</strong><span>envío exprés</span></li>
+        </ul>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="glass-tile glass h1">
+          <img class="tile-img" decoding="async" loading="lazy" width="200" height="260"
+            src="https://fimgs.net/mdimg/perfume-thumbs/375x500.39681.jpg"
+            alt="">
+          <span class="tile-tag">Good Girl</span>
+        </div>
+        <div class="glass-tile glass h2">
+          <img class="tile-img" decoding="async" loading="lazy" width="200" height="260"
+            src="https://fimgs.net/mdimg/perfume/o.31861.jpg"
+            alt="">
+          <span class="tile-tag">Sauvage</span>
+        </div>
+        <div class="glass-tile glass h3">
+          <img class="tile-img" decoding="async" loading="lazy" width="200" height="260"
+            src="https://fimgs.net/mdimg/perfume/o.9828.jpg"
+            alt="">
+          <span class="tile-tag">Aventus</span>
+        </div>
+        <span class="orbit glass" data-icon="◆"></span>
+        <span class="orbit glass r2" data-icon="✦"></span>
+        <span class="orbit glass r3" data-icon="·"></span>
+      </div>
+    </section>
+
+    <!-- ===== MARQUEE ===== -->
+    <div class="marquee store-view" data-view-panel="parfums" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Ámbar</span><i>·</i><span>Sándalo</span><i>·</i><span>Bergamota</span><i>·</i><span>Vainilla</span><i>·</i><span>Azahar</span><i>·</i><span>Vetiver</span><i>·</i><span>Almizcle</span><i>·</i><span>Azafrán</span>
+        <span>Ámbar</span><i>·</i><span>Sándalo</span><i>·</i><span>Bergamota</span><i>·</i><span>Vainilla</span><i>·</i><span>Azahar</span><i>·</i><span>Vetiver</span><i>·</i><span>Almizcle</span><i>·</i><span>Azafrán</span>
+      </div>
+    </div>
+
+    <!-- ===== COLECCIONES ===== -->
+    <section class="section store-view" data-view-panel="parfums" id="colecciones">
+      <div class="section-head">
+        <p class="eyebrow reveal">Nuestras líneas</p>
+        <h2 class="reveal">Tres familias, una obsesión</h2>
+        <p class="reveal">Dividimos nuestro catálogo por carácter olfativo. Así eliges el tuyo en segundos.</p>
+      </div>
+      <div class="cards">
+        <article class="glass card reveal">
+          <div class="card-art amber"></div>
+          <h3>Amber & Oro</h3>
+          <p>Resinas cálidas, vainillas oscuras y azafrán. Para los atardeceres que no quieres que acaben.</p>
+          <a class="ghost-link" href="#productos">Explorar <span>→</span></a>
+        </article>
+        <article class="glass card reveal">
+          <div class="card-art floral"></div>
+          <h3>Flores & Dulces</h3>
+          <p>Flores blancas, frutas y notas golosas. La primavera y el postre, en una sola pulverización.</p>
+          <a class="ghost-link" href="#productos">Explorar <span>→</span></a>
+        </article>
+        <article class="glass card reveal">
+          <div class="card-art woody"></div>
+          <h3>Maderas & Frescos</h3>
+          <p>Vetiver, cedro y cítricos. La sobriedad de un bosque que lo sabe todo.</p>
+          <a class="ghost-link" href="#productos">Explorar <span>→</span></a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== PRODUCTOS ===== -->
+    <section class="section store-view" data-view-panel="parfums" id="productos">
+<div class="section-head">
+        <p class="eyebrow reveal">Favoritos</p>
+        <h2 class="reveal">Los más reconocidos</h2>
+        <p class="reveal">Nuestra selección de fragancias de marca más buscadas, listas para añadir a tu pedido. ¿Quieres verlas todas? El catálogo completo tiene 161.</p>
+        <p class="reveal price-scale">Precio por frasco de 50 ml. Envíos a toda Colombia.</p>
+      </div>
+      <div class="grid" id="productGrid"></div>
+      <div class="cat-more reveal">
+        <a class="btn btn-primary" href="catalogo.html">
+          Ver todo el catálogo · 161 perfumes
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===== EXPERIENCIA / LA CASA ===== -->
+    <section class="section split store-view" data-view-panel="parfums" id="experiencia">
+      <div class="split-copy">
+        <p class="eyebrow reveal">La Casa</p>
+        <h2 class="reveal">Marca sí.<br>Precio de casa.</h2>
+        <p class="reveal">Trabajamos con las grandes casas de la perfumería: fragancias que huelen, duran y se sienten premium, al precio que sí quieres pagar. Botella sellada, autenticidad garantizada y una fijación que aguanta el día completo.</p>
+        <ul class="features">
+          <li class="reveal"><span class="f-icon glass">✦</span><div><strong>Grandes casas</strong><p>Perfumes de marca seleccionados entre los clásicos de la perfumería mundial.</p></div></li>
+          <li class="reveal"><span class="f-icon glass">♻</span><div><strong>Envase listo</strong><p>Frasco sellado de fábrica, listo para regalar o estrenar.</p></div></li>
+          <li class="reveal"><span class="f-icon glass">∞</span><div><strong>Fijación superior</strong><p>Concentración perfecta por ser Eau de Parfum, para todo el día.</p></div></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== OPINIONES ===== -->
+    <section class="section store-view" data-view-panel="parfums" id="opiniones">
+      <div class="section-head">
+        <p class="eyebrow reveal">Reseñas</p>
+        <h2 class="reveal">Lo que huele la gente</h2>
+        <div class="reviews-summary reveal">
+          <span class="stars">★★★★★</span>
+          <strong>5.0</strong>
+          <span>5 reseñas</span>
+        </div>
+      </div>
+      <div class="quotes">
+        <figure class="glass reveal">
+          <div class="stars">★★★★★</div>
+          <blockquote>“Me pararon en el ascensor para preguntarme qué perfume llevaba. No me lo creía cuando le dije el precio.”</blockquote>
+          <figcaption>— Carmen L.</figcaption>
+        </figure>
+        <figure class="glass reveal">
+          <div class="stars">★★★★★</div>
+          <blockquote>“La duración es de otro nivel. 8 horas en la oficina y sigo notándolo.”</blockquote>
+          <figcaption>— Andrés M.</figcaption>
+        </figure>
+        <figure class="glass reveal">
+          <div class="stars">★★★★★</div>
+          <blockquote>“El precio sí se nota: no pagas por la marca y el aroma queda igual. Repetí compra.”</blockquote>
+          <figcaption>— Valentina R.</figcaption>
+        </figure>
+        <figure class="glass reveal">
+          <div class="stars">★★★★★</div>
+          <blockquote>“Pedí 2 del mismo frasco y la entrega fue rapidísima. El 9PM está de otro nivel.”</blockquote>
+          <figcaption>— Mariana T.</figcaption>
+        </figure>
+        <figure class="glass reveal">
+          <div class="stars">★★★★★</div>
+          <blockquote>“Lo llevé a una boda y todo el mundo lo quiso. Impecable y a un precio de otro planeta.”</blockquote>
+          <figcaption>— Laura P.</figcaption>
+        </figure>
+      </div>
+
+      <div class="review-card glass reveal">
+        <h3>Deja tu reseña</h3>
+        <p class="review-card-note">Elige tus estrellas, cuéntanos qué perfume probaste y envíala por WhatsApp. Con tu permiso la publicamos aquí.</p>
+        <form class="review-form" id="reviewForm" novalidate>
+          <div class="star-pick" id="starPick" role="radiogroup" aria-label="Puntuación">
+            <button type="button" data-star="1" aria-label="1 estrella" aria-pressed="false">★</button>
+            <button type="button" data-star="2" aria-label="2 estrellas" aria-pressed="false">★</button>
+            <button type="button" data-star="3" aria-label="3 estrellas" aria-pressed="false">★</button>
+            <button type="button" data-star="4" aria-label="4 estrellas" aria-pressed="false">★</button>
+            <button type="button" data-star="5" aria-label="5 estrellas" aria-pressed="true">★</button>
+          </div>
+          <input type="text" id="revName" placeholder="Tu nombre (opcional)" maxlength="40">
+          <textarea id="revText" rows="4" placeholder="Tu reseña: qué perfume probaste, cómo huele, cuánto dura…" required></textarea>
+          <button class="btn btn-primary" type="submit">Enviar reseña por WhatsApp</button>
+        </form>
+        <p class="form-msg" id="revMsg"></p>
+        <div class="mail-note">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 1 4 4c0 1.3-.6 1.9-1.2 2.6C14.1 9.5 13.5 10.4 13 12H11c-.5-1.6-1.1-2.5-1.8-3.4C8.6 7.9 8 7.3 8 6a4 4 0 0 1 4-4z"/><path d="M11 14h2l.5 3h-3l.5-3z"/></svg>
+          <span id="revHint">Al hacer clic se abre WhatsApp con tu reseña lista para enviar.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== NEWSLETTER + CONTACTO ===== -->
+    <section class="section newsletter-wrap store-view" data-view-panel="parfums" id="contacto">
+      <div class="newsletter glass reveal">
+        <p class="eyebrow">· Contacto ·</p>
+        <h2>¿Tienes dudas o quieres encargar?</h2>
+        <p>Escríbeme por correo o WhatsApp y te respondo el mismo día. Hago envíos a toda Colombia y también puedes recoger en persona.</p>
+        <div class="contact-row">
+          <a class="btn btn-primary" href="mailto:estebancorreaappdata456@gmail.com?subject=Consulta%20sobre%20perfumes%20Aur%C3%A9%20Parfums">
+            <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M3 7l9 6 9-6"/></svg>
+            estebancorreaappdata456@gmail.com
+          </a>
+          <a class="btn btn-ghost wa-ghost" href="https://wa.me/573059279731?text=Hola%20Aur%C3%A9%20Parfums%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20perfumes" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.4 14.1c-.2.6-1.2 1.2-1.7 1.2-.4.1-1 .1-1.6-.1-.4-.1-.9-.3-1.5-.6-2.6-1.1-4.3-3.8-4.4-4-.1-.2-1.1-1.4-1.1-2.7 0-1.3.7-1.9.9-2.2.2-.3.5-.3.6-.3h.5c.2 0 .4 0 .6.4l.9 2.1c.1.2.1.4 0 .5l-.5.7c-.1.2-.3.3-.1.6.1.3.7 1.2 1.5 1.9 1 1 1.9 1.3 2.2 1.5.3.1.4.1.6-.1l.8-.9c.2-.3.4-.2.6-.1l1.9.9c.3.1.4.2.5.3 0 .1 0 .6-.1 1z"/></svg>
+            +57 305 927 9731
+          </a>
+        </div>
+        <div class="mail-note">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 1 4 4c0 1.3-.6 1.9-1.2 2.6C14.1 9.5 13.5 10.4 13 12H11c-.5-1.6-1.1-2.5-1.8-3.4C8.6 7.9 8 7.3 8 6a4 4 0 0 1 4-4z"/><path d="M11 14h2l.5 3h-3l.5-3z"/></svg>
+          <span>Se envía directo a nuestro correo, sin abrir Gmail. Respuesta el mismo día.</span>
+        </div>
+        <form class="newsletter-form" id="newsForm" novalidate>
+          <input type="text" id="newsName" placeholder="Tu nombre (opcional)" maxlength="60">
+          <input type="email" id="newsEmail" placeholder="tu@correo.com" aria-label="Tu correo electrónico" required>
+          <textarea id="newsMsgText" rows="4" placeholder="Tu mensaje: dudas, encargos, precios…" required></textarea>
+          <button class="btn btn-primary" type="submit">Enviar mensaje</button>
+        </form>
+        <p class="form-msg" id="newsMsg" role="status"></p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img class="brand-logo" src="icon.png" alt="Logo Auré Parfums" width="40" height="40" loading="lazy">
+        <strong>Auré Parfums × XCRSCREW</strong>
+        <p>Perfumes de marca de alta calidad. Hechos con cariño en Colombia.</p>
+      </div>
+      <nav aria-label="Institucional">
+        <a href="#top">Inicio</a>
+        <a href="#colecciones">Colecciones</a>
+        <a href="#productos">Perfumes</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <div class="footer-meta">
+        <a class="mailto-link" href="mailto:estebancorreaappdata456@gmail.com">estebancorreaappdata456@gmail.com</a>
+        <a class="mailto-link" href="https://wa.me/573059279731" target="_blank" rel="noopener">+57 305 927 9731</a>
+        <p class="fine">© 2026 Auré Parfums. Diseño Liquid Glass.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== WHATSAPP FLOTANTE ===== -->
+  <a href="https://wa.me/573059279731?text=Hola%20Aur%C3%A9%20Parfums%2C%20vengo%20de%20la%20p%C3%A1gina%20y%20quiero%20hacer%20un%20pedido" class="wa-float" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+    <svg viewBox="0 0 24 24" width="26" height="26" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.4 14.1c-.2.6-1.2 1.2-1.7 1.2-.4.1-1 .1-1.6-.1-.4-.1-.9-.3-1.5-.6-2.6-1.1-4.3-3.8-4.4-4-.1-.2-1.1-1.4-1.1-2.7 0-1.3.7-1.9.9-2.2.2-.3.5-.3.6-.3h.5c.2 0 .4 0 .6.4l.9 2.1c.1.2.1.4 0 .5l-.5.7c-.1.2-.3.3-.1.6.1.3.7 1.2 1.5 1.9 1 1 1.9 1.3 2.2 1.5.3.1.4.1.6-.1l.8-.9c.2-.3.4-.2.6-.1l1.9.9c.3.1.4.2.5.3 0 .1 0 .6-.1 1z"/></svg>
+  </a>
+
+  <!-- ===== CART DRAWER ===== -->
+  <div class="scrim" id="scrim" hidden></div>
+  <aside class="drawer glass" id="cartDrawer" aria-hidden="true" aria-label="Carrito de compra">
+    <div class="drawer-head">
+      <h3>Tu carrito</h3>
+      <button class="icon-btn" id="closeCart" aria-label="Cerrar carrito">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <ul class="cart-items" id="cartItems"></ul>
+    <div class="drawer-foot">
+      <div class="drawer-total">
+        <span id="cartTotalNote">Total</span><strong id="cartTotal">$0</strong>
+      </div>
+      <p class="fine">Pide por WhatsApp o correo con tu pedido y listo.</p>
+      <button class="btn btn-primary btn-block" id="checkoutBtn">Confirmar por WhatsApp</button>
+    </div>
+  </aside>
+
+
+<!-- ===== TOAST ===== -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js?v=22" defer></script>
+</body>
+</html>
